@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+</head>
+<body>
+  <h1>Signup form</h1>  
+
+  <form action="/home">
+    <p>
+    <label for="name">Name:</label>
+    <input
+    id="name"
+     type="text"
+     placeholder="Enter your name..." 
+     required
+     />
+     </p>
+
+     <p>
+     <label for="email">Email:</label>
+    <input
+    id="email"
+     type="email"
+     placeholder="Enter your email..."
+     required
+     />
+     </p>
+    <!--RegEx-->
+     <p>
+     <label for="password">Password:</label>
+    <input
+    id="password"
+     type="password"
+     placeholder="Enter your password..."
+     title="Требование к паролю: Начинается с заглавной буквы на латинице или кириллице, одна цифра, наличие спец символа и длина 8 строков"
+     pattern="[A-ZА-Я](?=.*\d)(?=.*[a-zA-Z])(?=.\[@$!%*?&]).{7,}"
+     required
+     />
+     </p>
+    <!--System.out.println(Галилео Галлилей сказал: \ И все-таки она вертится...\)-->
+       <p>
+     <label for="phone">Phone:</label>
+    <input
+    id="phone"
+     type="tel"
+     placeholder="Example: +123-345-234"
+     pattern="\+?[0-9]{3}-?[0-9]{4}"
+     required
+     />
+     </p>
+
+     <p>
+        <label for="hobby">Hobby:</label>
+        <select id="hobby">
+            <option value="empty">Choose your hobby</option>
+            <option value="chess">Chess</option>
+            <option value="music">Guitar</option>
+            <option value="music">Piano</option>
+            <option value="sport">Football</option>
+            <option value="other">Other</option>
+        </select>
+     </p>
+
+     <p>
+        <label for="agreement">I agree...</label>
+        <input id="agreement" type="checkbox">
+     </p>
+
+     <p>
+        <label for="male">Male:</label>
+        <input type="radio" id="male" name="gender" required>
+
+        <label for="female">Female:</label>
+        <input type="radio" id="female" name="gender">
+     </p>
+
+    <button type="reset">Reset</button>
+    <button type="submit">Sign Up</button>
+  </form>
+</body>
+</html>
